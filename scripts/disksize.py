@@ -30,10 +30,10 @@ def _get_size():
         if _percent > _threshold:
             _f.write("Disk space on /" + disk + "is at: " + _percent + "%\n")
     _f.close()
-    email_admin()
+    _email_admin()
 
 
-def email_admin():
+def _email_admin():
     if not os.stat(_path).st_size == 0:
         _body = open(_path, "r").read()
         _msg.set_content(_body)
