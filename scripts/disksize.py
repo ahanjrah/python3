@@ -27,7 +27,7 @@ def _get_size():
     for disk in _disks:
         total, used, free = shutil.disk_usage("/" + disk)
         _percent = '%0.0f' % ((used/total) * 100)                        # Get the percentage
-        if _percent > _threshold:
+        if _percent > _threshold:					 # if % is more than threshold > write to the file
             _f.write("Disk space on /" + disk + "is at: " + _percent + "%\n")
     _f.close()
     _email_admin()
