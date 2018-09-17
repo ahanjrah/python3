@@ -94,6 +94,7 @@ def _genkeys():
     sys.exit(0)
 
 
-_checkusername()
-_genkeys()
+if __name__ == "__main__":
+    _checkusername()
+    _genkeys()
 #
